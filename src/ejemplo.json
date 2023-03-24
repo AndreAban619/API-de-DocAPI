@@ -1,0 +1,23 @@
+[
+    {
+        "id":"1",
+        "titulo": "Mamitas",
+        "director":"enrique segoviano",
+        "anio": "2001",
+        "rating":"9.1"
+    },
+    {
+        "id":"2",
+        "titulo": "XRAYOS",
+        "director":"pancracio",
+        "anio": "1998",
+        "rating":"5.7"
+    },
+    {
+        "id":"3",
+        "titulo": "Las aventuras de lolin",
+        "director":"maximiliano huerta",
+        "anio": "2010",
+        "rating":"10"
+    }
+]
