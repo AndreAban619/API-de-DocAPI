@@ -4,8 +4,9 @@
 //npm run dev para correrlo, creamos el comadon dev en el package.json, antes ejecutabamos con node src/index.js 
 //npm i underscore para eliminar, recorres arreglos
 //npm i node-fetch para hacer peticiones a urls (npm install node-fetch@2.6.1)actual
+//npm install mysql para base de datos
 const express = require('express');
-const app = express();
+const app = express(); //ejecuto express
 const morgan = require('morgan'); //morgan procesa los datos antes de que el servidor lo reciba -D es que no depende del proyecto, si no, del desarollo
 
 //configuraciones
@@ -22,10 +23,12 @@ app.use(express.json()); //recibir y entender los formatos json
 /*app.get('/', (req, res)=>{
          res.send('Hello world');
 }); //cuando usen el /, el servidor responde con un mensaje
-*/
+
 app.use(require('./routes/routes'));//obtiene las rutas desde routes
 app.use('/api/movies',require('./routes/movies'));
-app.use('/api/users',require('./routes/user'));
+app.use('/api/users',require('./routes/user'));*/
+app.use('/api/usuarios',require('./routes/usuarios'));
+app.use('/api/tokens',require('./routes/tokens'));
 //empezando servidor
 app.listen(app.get('port'),() =>{ // mi aplicación escucha en el puerto 3000 y despues despliega un msj de ubicación
     console.log(`Server en el puerto ${app.get('port')}`);
