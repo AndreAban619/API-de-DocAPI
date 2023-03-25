@@ -29,7 +29,7 @@ app.use('/api/movies',require('./routes/movies'));
 app.use('/api/users',require('./routes/user'));*/
 app.use('/api/usuarios',require('./routes/usuarios'));
 app.use('/api/tokens',require('./routes/tokens'));
-//empezando servidor
+//empezando servidor-
 app.listen(app.get('port'),() =>{ // mi aplicación escucha en el puerto 3000 y despues despliega un msj de ubicación
     console.log(`Server en el puerto ${app.get('port')}`);
 });
