@@ -4,6 +4,7 @@
 //npm run dev para correrlo, creamos el comadon dev en el package.json, antes ejecutabamos con node src/index.js 
 //npm i underscore para eliminar, recorres arreglos
 //npm i node-fetch para hacer peticiones a urls (npm install node-fetch@2.6.1)actual
+//ANDRÉ VICENTE CANUL ABÁN
 //npm install mysql para base de datos
 const express = require('express');
 const app = express(); //ejecuto express
