@@ -21,15 +21,7 @@ app.use(express.json()); //recibir y entender los formatos json
 
 //Rutas, routes
 
-/*app.get('/', (req, res)=>{
-         res.send('Hello world');
-}); //cuando usen el /, el servidor responde con un mensaje
-
-app.use(require('./routes/routes'));//obtiene las rutas desde routes
-app.use('/api/movies',require('./routes/movies'));
-app.use('/api/users',require('./routes/user'));*/
-app.use('/api/usuarios',require('./routes/usuarios'));
-app.use('/api/tokens',require('./routes/tokens'));
+app.use('/api/citas',require('./routes/citas'));
 //empezando servidor-
 app.listen(app.get('port'),() =>{ // mi aplicación escucha en el puerto 3000 y despues despliega un msj de ubicación
     console.log(`Server en el puerto ${app.get('port')}`);

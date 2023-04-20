@@ -4,7 +4,7 @@ const mysqlconnection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'api_tokens'
+    database: 'viodatcadb'
 
 });
 
