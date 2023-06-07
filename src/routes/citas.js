@@ -5,7 +5,7 @@ const mysqlconnection = require('../database');
 
 router.get('/',(req,res)=>
 {
-    mysqlconnection.query('SELECT * FROM citas',(err, rows, fields)=>
+    mysqlconnection.query('SELECT * FROM autires',(err, rows, fields)=>
     {
        if(!err)
        {
@@ -17,7 +17,7 @@ router.get('/',(req,res)=>
 });
 
 router.post('/', (req, res) => {
-  mysqlconnection.query('INSERT INTO usuarios SET ?', req.body, (error, result) => {
+  mysqlconnection.query('INSERT INTO autires SET ?', req.body, (error, result) => {
       if (error) throw error;
       res.status(201).send(`Usuario añadido ID: ${result.insertId}`);
   });
@@ -25,7 +25,7 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   const { id } = req.params;
-  mysqlconnection.query('UPDATE usuarios SET ? WHERE id_usuario=?', [req.body, id], (error, result) => {
+  mysqlconnection.query('UPDATE autires SET ? WHERE id_usuario=?', [req.body, id], (error, result) => {
       if (error) throw error;
       res.send('Usuario Actualizado');
   });
@@ -33,7 +33,7 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   const { id } = req.params;
-  mysqlconnection.query('DELETE FROM usuarios WHERE id_usuario=?', id, (error, result) => {
+  mysqlconnection.query('DELETE FROM autires WHERE id_usuario=?', id, (error, result) => {
       if (error) throw error;
       res.send('Usuario eliminado.');
   });
